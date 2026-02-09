@@ -24,10 +24,12 @@ SECRET_KEY = 'django-insecure-go_)bnmo1igws3mxmmgn4puk2%tju%7gqxlbs-alz$8lxs@gw#
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-
+#--------------------------------------------------------------------------------------------------------------
 ALLOWED_HOSTS = ['jangorest-1.onrender.com', 'localhost', '127.0.0.1']
 
-
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+CSRF_TRUSTED_ORIGINS = ['https://jangorest-1.onrender.com']
+#--------------------------------------------------------------------------------------------------------------
 # Application definition
 
 INSTALLED_APPS = [
